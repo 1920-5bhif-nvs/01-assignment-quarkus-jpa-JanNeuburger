@@ -51,5 +51,9 @@ public class Meeting {
         this.description = description;
     }
 
+    public void setProject(Project project) {
+        this.project = project;
+    }
+
     //endregion
 }

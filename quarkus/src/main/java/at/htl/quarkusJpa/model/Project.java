@@ -97,4 +97,9 @@ public class Project {
         members.add(student);
         student.getProjects().add(this);
     }
+
+    public void addMeeting(Meeting m){
+        meetings.add(m);
+        m.setProject(this);
+    }
 }

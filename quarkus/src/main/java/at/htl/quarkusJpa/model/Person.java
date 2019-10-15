@@ -2,14 +2,14 @@ package at.htl.quarkusJpa.model;
 
 import javax.persistence.*;
 
-@NamedQuery(name = "Person.findAll", query = "select p from person p")
-@NamedQuery(name = "Person.findById", query = "select p from person p WHERE p.id = :ID")
-@Entity(name = "person")
+@NamedQuery(name = "Person.getAll", query = "select p from Person p")
+@NamedQuery(name = "Person.findById", query = "select p from Person p WHERE p.id = :ID")
+@Entity(name = "Person")
 @Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn
 public class Person {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String firstName;

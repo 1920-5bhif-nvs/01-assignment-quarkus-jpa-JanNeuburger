@@ -2,8 +2,10 @@ package at.htl.quarkusJpa.facades;
 
 import at.htl.quarkusJpa.model.Teacher;
 
+import javax.enterprise.context.ApplicationScoped;
 import java.util.List;
 
+@ApplicationScoped
 public class TeacherFacade extends AbstractFacade<Teacher> {
     @Override
     public List<Teacher> getAll() {

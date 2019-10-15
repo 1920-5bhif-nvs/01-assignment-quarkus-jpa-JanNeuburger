@@ -4,12 +4,12 @@ import javax.persistence.*;
 import java.util.LinkedList;
 import java.util.List;
 
-@NamedQuery(name = "Project.findAll", query = "select p from project p")
-@NamedQuery(name = "Project.findById", query = "select p from project p WHERE p.id = :ID")
-@Entity(name = "project")
+@NamedQuery(name = "Project.getAll", query = "select p from Project p")
+@NamedQuery(name = "Project.findById", query = "select p from Project p WHERE p.id = :ID")
+@Entity(name = "Project")
 public class Project {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;

@@ -3,12 +3,12 @@ package at.htl.quarkusJpa.model;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-@NamedQuery(name = "Meeting.findAll", query = "select m from meeting m")
-@NamedQuery(name = "Meeting.findById", query = "select m from meeting m WHERE m.id = :ID")
-@Entity(name = "meeting")
+@NamedQuery(name = "Meeting.getAll", query = "select m from Meeting m")
+@NamedQuery(name = "Meeting.findById", query = "select m from Meeting m WHERE m.id = :ID")
+@Entity(name = "Meeting")
 public class Meeting {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private LocalDateTime date;

@@ -4,7 +4,6 @@ import at.htl.quarkusJpa.facades.ProjectFacade;
 import at.htl.quarkusJpa.model.Project;
 
 import javax.inject.Inject;
-import javax.persistence.PrimaryKeyJoinColumn;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;

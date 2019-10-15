@@ -2,8 +2,10 @@ package at.htl.quarkusJpa.facades;
 
 import at.htl.quarkusJpa.model.Meeting;
 
+import javax.enterprise.context.ApplicationScoped;
 import java.util.List;
 
+@ApplicationScoped
 public class MeetingFacade extends AbstractFacade<Meeting> {
     @Override
     public List<Meeting> getAll() {

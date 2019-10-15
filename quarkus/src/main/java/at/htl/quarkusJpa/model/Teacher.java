@@ -2,9 +2,9 @@ package at.htl.quarkusJpa.model;
 
 import javax.persistence.*;
 
-@NamedQuery(name = "Teacher.findAll", query = "select t from teacher t")
-@NamedQuery(name = "Teacher.findById", query = "select t from teacher t WHERE t.id = :ID")
-@Entity(name = "teacher")
+@NamedQuery(name = "Teacher.getAll", query = "select t from Teacher t")
+@NamedQuery(name = "Teacher.findById", query = "select t from Teacher t WHERE t.id = :ID")
+@Entity(name = "Teacher")
 public class Teacher extends Person{
     private String title;
 

@@ -10,6 +10,7 @@ import at.htl.quarkusJpa.model.Student;
 import at.htl.quarkusJpa.model.Teacher;
 import io.quarkus.runtime.StartupEvent;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.event.Observes;
 import javax.inject.Inject;
 import javax.print.event.PrintJobEvent;
@@ -17,6 +18,7 @@ import javax.transaction.Transactional;
 import java.awt.*;
 import java.time.LocalDateTime;
 
+@ApplicationScoped
 public class InitBean {
     @Inject
     MeetingFacade meetingFacade;
